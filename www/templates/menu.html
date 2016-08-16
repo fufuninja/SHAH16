@@ -1,0 +1,99 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-light">
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios-search-strong" menu-toggle="right">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu class="sidemenu" side="left">
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close>
+          <img width="200px" src="https://s3-ap-southeast-1.amazonaws.com/assets.produkhero.com/img/logo1.svg">
+        </ion-item>
+        <ion-item menu-close href="#/app/feed">
+          <i class="icon ion-ios-paper-outline"></i>
+          Feed
+        </ion-item>
+        <ion-item menu-close href="#/app/profile">
+          <i class="icon ion-ios-person-outline"></i>
+          Your Store
+        </ion-item>
+        <ion-item menu-close href="#/app/addProduct">
+          <i class="icon ion-ios-plus-outline"></i>
+          Add Product
+        </ion-item>
+        <ion-item menu-close href="#/app/addOffer">
+          <i class="icon ion-bag"></i>
+          Add Deal
+        </ion-item>
+        <ion-item menu-close href="#/app/wishlist">
+          <i class="icon ion-ios-heart-outline"></i>
+          Wishlist
+        </ion-item>
+        <ion-item menu-close ng-click="login()">
+          <i class="icon ion-log-in"></i>
+          Log In
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+  <ion-side-menu class="sidemenu" side="right">
+    <ion-content>
+      <ion-list class="leftmenu">
+        <ion-item>
+          <label class="item item-input searchbar">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="Search Product">
+          </label>
+        </ion-item>
+        <p class="leftmenuOR">OR SELECT FROM</p>
+        <ion-item menu-close href="#">
+          <a class="item item-icon-right label" href="#">
+           Mens
+           <i class="icon ion-chevron-right"></i>
+         </a>
+        </ion-item>
+        <ion-item menu-close href="#">
+          <a class="item item-icon-right label" href="#">
+           Womens
+           <i class="icon ion-chevron-right"></i>
+         </a>
+        </ion-item>
+        <ion-item menu-close href="#">
+          <a class="item item-icon-right label" href="#">
+           Electronics
+           <i class="icon ion-chevron-right"></i>
+         </a>
+        </ion-item>
+        <p class="leftmenuOR">AND FILTER BY PRICE</p>
+        <ion-item class="rangebar">
+          <ul>
+            <li>50</li>
+            <li>100</li>
+            <li>150</li>
+            <li>200</li>
+          </ul>
+          <div class="item range range-positive">
+            <input type="range" name="price" ng-model="data.price" min="0" max="200" value="5">
+          </div>
+          <p>Price: {{data.price}}</p>
+        </ion-item>
+        <button menu-close class="button button-block button-balanced filterButton">
+  		  FILTER RESULTS
+  		</button>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
